@@ -52,13 +52,13 @@ class Client extends JsTanInit
     {
         $config = $this->getConfig();
         $data = [
-            'app_key' =>$config['app_Key'],
+            'app_key' =>$config['appKey'],
             'timestamp' => time(),
             'charset' => $config['charset']
         ];
-        $sign = Util::getSign($config['app_Secret'],$data);
+        $sign = Util::getSign($config['appSecret'],$data);
         return $config['authUrl'] .
-            '?app_key=' . $data['app_key'] .
+            '?app_key=' . $data['appkey'] .
             '&timestamp=' . $data['timestamp'] .
             '&charset=' . $data['charset'] .
             '&sign=' . $sign;
@@ -72,13 +72,13 @@ class Client extends JsTanInit
     public function getAccessToken($code): Exception|string|GuzzleException
     {
         $data = [
-            'app_key' => $this->getConfig()['app_Key'],
+            'app_key' => $this->getConfig()['appKey'],
             'timestamp' => time(),
             'grant_type' => 'authorization_code',
             'charset' => $this->getConfig()['charset'],
             'code' => $code,
         ];
-        $data['sign'] = Util::getSign($this->getConfig()['app_Secret'],$data);
+        $data['sign'] = Util::getSign($this->getConfig()['appSecret'],$data);
         return $this->request($this->getConfig()['apiUrl']. 'openWeb/auth/getInitToken', $data);
     }
 
@@ -90,7 +90,7 @@ class Client extends JsTanInit
     public function refreshToken($refreshToken): Exception|string|GuzzleException
     {
         $data = [
-            'app_key' => $this->getConfig()['app_Key'],
+            'app_key' => $this->getConfig()['appKey'],
             'timestamp' => time(),
             'grant_type' => 'refresh_token',
             'charset' => $this->getConfig()['charset'],
@@ -98,7 +98,7 @@ class Client extends JsTanInit
             'scope' => 'all',
         ];
 
-        $data['sign'] = Util::getSign($this->getConfig()['app_Secret'],$data);
+        $data['sign'] = Util::getSign($this->getConfig()['appSecret'],$data);
         return $this->request($this->getConfig()['apiUrl']. 'openWeb/auth/refreshToken', $data);
     }
 
