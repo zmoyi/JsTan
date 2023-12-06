@@ -1,0 +1,25 @@
+{
+    "name": "zmoyi/jushuitan",
+    "description": "聚水潭-php-sdk",
+    "keywords": ["JuShuiTan", "ERP"],
+    "type": "library",
+    "require": {
+        "php": ">=8.1",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "JsTan\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "墨子熙"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}
