@@ -1,6 +1,7 @@
 # 聚水潭 sdk（2.0）
 
-[![Latest Stable Version](http://poser.pugx.org/zmoyi/jushuitan/v)](https://packagist.org/packages/zmoyi/jushuitan) [![Total Downloads](http://poser.pugx.org/zmoyi/jushuitan/downloads)](https://packagist.org/packages/zmoyi/jushuitan) [![License](http://poser.pugx.org/zmoyi/jushuitan/license)](https://packagist.org/packages/zmoyi/jushuitan) [![PHP Version Require](http://poser.pugx.org/zmoyi/jushuitan/require/php)](https://packagist.org/packages/zmoyi/jushuitan)
+[![Latest Stable Version](http://poser.pugx.org/zmoyi/jstan/v)](https://packagist.org/packages/zmoyi/jstan)[![Total Downloads](http://poser.pugx.org/zmoyi/jstan/downloads)](https://packagist.org/packages/zmoyi/jstan)[![License](http://poser.pugx.org/zmoyi/jstan/license)](https://packagist.org/packages/zmoyi/jstan)[![Monthly Downloads](http://poser.pugx.org/zmoyi/jstan/d/monthly)](https://packagist.org/packages/zmoyi/jstan)[![Daily Downloads](http://poser.pugx.org/zmoyi/jstan/d/daily)](https://packagist.org/packages/zmoyi/jstan)[![Version](http://poser.pugx.org/zmoyi/jstan/version)](https://packagist.org/packages/zmoyi/jstan)[![PHP Version Require](http://poser.pugx.org/zmoyi/jstan/require/php)](https://packagist.org/packages/zmoyi/jstan)
+
 
 ## 介绍
 
@@ -17,7 +18,7 @@
 ## 安装
 
 ```
-composer require zmoyi/jushuitan 
+composer require zmoyi/jstan
 ```
 
 
