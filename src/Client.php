@@ -2,7 +2,7 @@
 namespace JsTan;
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
-use JsTan\http\Http;
+use JsTan\Http\Http;
 
 
 class Client extends JsTanInit

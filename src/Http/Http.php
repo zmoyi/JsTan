@@ -1,6 +1,6 @@
 <?php
 
-namespace JsTan\http;
+namespace JsTan\Http;
 
 use GuzzleHttp\Client;
 
