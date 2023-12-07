@@ -58,7 +58,7 @@ class Client extends JsTanInit
         ];
         $sign = Util::getSign($config['appSecret'],$data);
         return $config['authUrl'] .
-            '?app_key=' . $data['appkey'] .
+            '?app_key=' . $data['app_key'] .
             '&timestamp=' . $data['timestamp'] .
             '&charset=' . $data['charset'] .
             '&sign=' . $sign;
