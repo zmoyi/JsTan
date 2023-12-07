@@ -67,7 +67,25 @@ class Client extends JsTanInit
     /**
      * @param $code
      * @return Exception|string|GuzzleException
-     * 获取access_token
+     * 获取access_token（getInitToken）[商家自研系统授权流程](https://openweb.jushuitan.com/doc?docId=23)
+     */
+    public function getInitToken($code): Exception|string|GuzzleException
+    {
+        $data = [
+            'app_key' => $this->getConfig()['appKey'],
+            'timestamp' => time(),
+            'grant_type' => 'authorization_code',
+            'charset' => $this->getConfig()['charset'],
+            'code' => $code,
+        ];
+        $data['sign'] = Util::getSign($this->getConfig()['appSecret'],$data);
+        return $this->request($this->getConfig()['apiUrl']. 'openWeb/auth/getInitToken', $data);
+    }
+
+    /**
+     * @param $code
+     * @return Exception|string|GuzzleException
+     * 获取access_token（accessToken）[第三方授权流程](https://openweb.jushuitan.com/doc?docId=25)
      */
     public function getAccessToken($code): Exception|string|GuzzleException
     {
@@ -79,7 +97,7 @@ class Client extends JsTanInit
             'code' => $code,
         ];
         $data['sign'] = Util::getSign($this->getConfig()['appSecret'],$data);
-        return $this->request($this->getConfig()['apiUrl']. 'openWeb/auth/getInitToken', $data);
+        return $this->request($this->getConfig()['apiUrl']. 'openWeb/auth/accessToken', $data);
     }
 
     /**
