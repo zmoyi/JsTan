@@ -21,7 +21,7 @@
 composer require zmoyi/jstan
 ```
 
-
+### laravel 使用移步至 [laravel-jsTan](https://github.com/zmoyi/laravel-jstan)
 
 ## 配置
 
