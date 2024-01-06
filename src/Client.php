@@ -5,7 +5,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use JsTan\Http\Http;
 
 
-class Client extends JsTanInit
+class Client extends JsTanInIt
 {
     private static ?Client $instance = null;
 

@@ -4,7 +4,7 @@ namespace JsTan;
 
 use InvalidArgumentException;
 
-class JsTanInit
+class JsTanInIt
 {
     /**
      * @var array
