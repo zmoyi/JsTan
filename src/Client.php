@@ -79,7 +79,7 @@ class Client extends JsTanInIt
             'code' => $code,
         ];
         $data['sign'] = Util::getSign($this->getConfig()['appSecret'],$data);
-        return $this->request($this->getConfig()['apiUrl']. 'openWeb/auth/getInitToken', $data);
+        return $this->post($this->getConfig()['apiUrl']. 'openWeb/auth/getInitToken', $data);
     }
 
     /**
@@ -97,7 +97,7 @@ class Client extends JsTanInIt
             'code' => $code,
         ];
         $data['sign'] = Util::getSign($this->getConfig()['appSecret'],$data);
-        return $this->request($this->getConfig()['apiUrl']. 'openWeb/auth/accessToken', $data);
+        return $this->post($this->getConfig()['apiUrl']. 'openWeb/auth/accessToken', $data);
     }
 
     /**
@@ -117,7 +117,7 @@ class Client extends JsTanInIt
         ];
 
         $data['sign'] = Util::getSign($this->getConfig()['appSecret'],$data);
-        return $this->request($this->getConfig()['apiUrl']. 'openWeb/auth/refreshToken', $data);
+        return $this->post($this->getConfig()['apiUrl']. 'openWeb/auth/refreshToken', $data);
     }
 
 
