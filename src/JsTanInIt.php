@@ -33,6 +33,7 @@ class JsTanInIt
      */
     private function setConfig(array $config): void
     {
+        // 新增时间戳配置
         $requiredKeys = [
             'authUrl',
             'baseUrl',
@@ -41,6 +42,7 @@ class JsTanInIt
             'appKey',
             'appSecret',
             'version',
+            'timestamp',
             'charset'
         ];
         foreach ($requiredKeys as $key) {
@@ -68,16 +70,17 @@ class JsTanInIt
     private function setPublicRequestParams(): void
     {
         $config = $this->config;
-        $requiredKeys = ['appKey', 'accessToken', 'charset', 'version'];
+        $requiredKeys = ['appKey', 'accessToken', 'charset', 'version','timestamp'];
         foreach ($requiredKeys as $key) {
             if (!isset($config[$key])) {
                 throw new InvalidArgumentException("Configuration error: missing required configuration item: '$key'。");
             }
         }
+        // 将timestamp提出
         $this->publicRequestParams = [
             'app_key' => $config['appKey'],
             'access_token' => $config['accessToken'],
-            'timestamp' => time(),
+            'timestamp' => $config['timestamp'],
             'charset' => $config['charset'],
             'version' => $config['version']
         ];

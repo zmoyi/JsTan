@@ -129,9 +129,18 @@ class Client extends JsTanInIt
      */
     public static function getInstance(array $config = []): Client
     {
-        if(self::$instance == null ||self::$instance->getConfig() !== $config ){
+        // 时间戳
+        $currentTimestamp = time(); // 获取当前时间戳
+        $instance = self::$instance;
+        
+        // 获取当前实例的配置
+        $instanceConfig = $instance ? $instance->getConfig() : null;
+
+        // 如果没有实例，或者实例配置不同，并时间戳差异超过30秒，则创建新实例
+        if (!$instance || $instanceConfig !== $config && abs($currentTimestamp - $instanceConfig['timestamp']) > 30 ) {
             self::$instance = new self($config);
         }
+    
         return self::$instance;
     }
     
