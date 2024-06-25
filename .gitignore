@@ -1,0 +1,6 @@
+vendor
+.idea
+.vscode
+composer.lock
+nginx.htaccess
+index.php
