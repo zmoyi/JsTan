@@ -1,6 +1,7 @@
 {
   "name": "zmoyi/jstan56",
   "type": "liblibrary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Liumingxi",
