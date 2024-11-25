@@ -1,5 +1,5 @@
 # 聚水潭 sdk（2.0）
-[![Latest Stable Version](http://poser.pugx.org/zmoyi/jstan/v)](https://packagist.org/packages/zmoyi/jstan) [![Total Downloads](http://poser.pugx.org/zmoyi/jstan/downloads)](https://packagist.org/packages/zmoyi/jstan) [![Latest Unstable Version](http://poser.pugx.org/zmoyi/jstan/v/unstable)](https://packagist.org/packages/zmoyi/jstan) [![License](http://poser.pugx.org/zmoyi/jstan/license)](https://packagist.org/packages/zmoyi/jstan) [![PHP Version Require](http://poser.pugx.org/zmoyi/jstan/require/php)](https://packagist.org/packages/zmoyi/jstan)
+[![Latest Stable Version](https://poser.pugx.org/zmoyi/jstan/v)](https://packagist.org/packages/zmoyi/jstan) [![Total Downloads](https://poser.pugx.org/zmoyi/jstan/downloads)](https://packagist.org/packages/zmoyi/jstan) [![Latest Unstable Version](https://poser.pugx.org/zmoyi/jstan/v/unstable)](https://packagist.org/packages/zmoyi/jstan) [![License](https://poser.pugx.org/zmoyi/jstan/license)](https://packagist.org/packages/zmoyi/jstan) [![PHP Version Require](https://poser.pugx.org/zmoyi/jstan/require/php)](https://packagist.org/packages/zmoyi/jstan)
 ## 介绍
 
 时隔一年，没有怎么维护旧版本，并且有很多问题，代码如屎山，这次进行了重构，2.0 版本（虽然代码还是屎山）
