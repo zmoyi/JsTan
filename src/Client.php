@@ -120,8 +120,6 @@ class Client extends JsTanInIt
         return $this->post($this->getConfig()['apiUrl']. 'openWeb/auth/refreshToken', $data);
     }
 
-
-
     /**
      * @param array $config
      * @return Client
