@@ -1,9 +1,9 @@
 <?php
 namespace JsTan;
+
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
 use JsTan\Http\Http;
-
 
 class Client extends JsTanInIt
 {
