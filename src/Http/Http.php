@@ -26,7 +26,7 @@ class Http
                 'Content-Type' => 'application/x-www-form-urlencoded;charset=UTF-8'
             ],
             'connect_timeout' => $config['timeout']??3.14
-        ]);
+        ] + $config['httpClientConfig']);
     }
 
     /**
