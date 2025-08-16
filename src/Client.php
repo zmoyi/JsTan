@@ -1,9 +1,9 @@
 <?php
 namespace JsTan;
+
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
 use JsTan\Http\Http;
-
 
 class Client extends JsTanInIt
 {
@@ -119,8 +119,6 @@ class Client extends JsTanInIt
         $data['sign'] = Util::getSign($this->getConfig()['appSecret'],$data);
         return $this->post($this->getConfig()['apiUrl']. 'openWeb/auth/refreshToken', $data);
     }
-
-
 
     /**
      * @param array $config

@@ -49,7 +49,11 @@ private array $config = [
   // 是否验证证书
   'verify' => false,
   // 超时时间
-  'timeout' => 0
+  'timeout' => 0,
+   // 强制覆盖GuzzleHttp请求参数
+  'httpClientConfig' => [
+      // 'proxy' => 'http://username:password@192.168.16.1:10'
+  ],
 ];
 ```
 
